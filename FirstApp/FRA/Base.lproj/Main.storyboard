@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="bH0-aF-5Je">
             <objects>
-                <viewController id="Ed3-qp-YFP" sceneMemberID="viewController">
+                <viewController id="Ed3-qp-YFP" customClass="LeagueVC" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="icd-Fo-Xe5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,7 +186,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="S2T-06-top" kind="show" id="xeD-BM-tJD"/>
+                                    <action selector="onNextTap:" destination="Ed3-qp-YFP" eventType="touchUpInside" id="nsK-js-cXb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Co-N5-wgG">
@@ -224,16 +224,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e8g-TY-jC6"/>
                     </view>
+                    <connections>
+                        <segue destination="S2T-06-top" kind="show" identifier="skillVCsegue" id="naP-Fb-2kN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Du-hd-8ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uis-Ug-wXg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="901.60000000000002" y="116.49175412293854"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="TV2-Zk-suB">
             <objects>
-                <viewController id="S2T-06-top" sceneMemberID="viewController">
+                <viewController id="S2T-06-top" customClass="SkillVC" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qjw-9S-B67">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

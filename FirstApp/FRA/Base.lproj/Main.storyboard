@@ -70,6 +70,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ed3-qp-YFP" kind="show" id="jSR-zC-wa0"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hx6-cc-xHa">
                                 <rect key="frame" x="128" y="40" width="119" height="20"/>
@@ -182,17 +185,36 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="S2T-06-top" kind="show" id="xeD-BM-tJD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Co-N5-wgG">
+                                <rect key="frame" x="37" y="23" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="Fys-tP-z4l"/>
+                                    <constraint firstAttribute="width" secondItem="3Co-N5-wgG" secondAttribute="height" multiplier="29:24" id="enn-v1-WyA"/>
+                                    <constraint firstAttribute="height" constant="24" id="zIK-Tt-VRO"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="uis-Ug-wXg" kind="unwind" unwindAction="unwindfromSkillVCWithUnwindSegue:" id="CvY-BN-dwh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LNs-5B-vLA" firstAttribute="width" secondItem="LNs-5B-vLA" secondAttribute="height" multiplier="277:87" id="1D8-Oy-vJj"/>
+                            <constraint firstItem="3Co-N5-wgG" firstAttribute="leading" secondItem="e8g-TY-jC6" secondAttribute="leading" constant="37" id="1xd-6G-iHr"/>
                             <constraint firstItem="tRw-l6-rWm" firstAttribute="top" secondItem="icd-Fo-Xe5" secondAttribute="top" id="4ho-yi-4hw"/>
+                            <constraint firstItem="3Co-N5-wgG" firstAttribute="top" secondItem="e8g-TY-jC6" secondAttribute="top" constant="3" id="5n7-ez-43c"/>
                             <constraint firstItem="vhT-QN-NDE" firstAttribute="centerX" secondItem="icd-Fo-Xe5" secondAttribute="centerX" id="ANE-rP-5gu"/>
                             <constraint firstItem="e8g-TY-jC6" firstAttribute="bottom" secondItem="tRw-l6-rWm" secondAttribute="bottom" id="E9q-Ix-fuy"/>
                             <constraint firstItem="LNs-5B-vLA" firstAttribute="centerX" secondItem="icd-Fo-Xe5" secondAttribute="centerX" id="FBC-BW-hD2"/>
                             <constraint firstItem="vhT-QN-NDE" firstAttribute="top" secondItem="e8g-TY-jC6" secondAttribute="top" constant="20" id="RCS-Ci-Lyb"/>
+                            <constraint firstItem="vhT-QN-NDE" firstAttribute="leading" secondItem="3Co-N5-wgG" secondAttribute="trailing" constant="62" id="Wca-7x-eWp"/>
                             <constraint firstItem="e8g-TY-jC6" firstAttribute="trailing" secondItem="tRw-l6-rWm" secondAttribute="trailing" id="bCA-mF-QgE"/>
+                            <constraint firstItem="LNs-5B-vLA" firstAttribute="top" secondItem="3Co-N5-wgG" secondAttribute="bottom" constant="47" id="fIN-bA-YsU"/>
                             <constraint firstItem="zEQ-r7-BZc" firstAttribute="centerX" secondItem="icd-Fo-Xe5" secondAttribute="centerX" id="gLd-Yp-bzY"/>
                             <constraint firstItem="LNs-5B-vLA" firstAttribute="top" secondItem="e8g-TY-jC6" secondAttribute="top" constant="74" id="i9z-2u-dzt"/>
                             <constraint firstItem="tRw-l6-rWm" firstAttribute="leading" secondItem="icd-Fo-Xe5" secondAttribute="leading" id="ltk-I0-TEB"/>
@@ -204,6 +226,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Du-hd-8ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uis-Ug-wXg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="901.60000000000002" y="116.49175412293854"/>
         </scene>
@@ -318,6 +341,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
